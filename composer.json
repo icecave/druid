@@ -1,6 +1,6 @@
 {
     "name": "icecave/druid",
-    "description": "A modern UUID library for PHP.",
+    "description": "A simple PHP library for generating universally unique identifiers (UUIDs).",
     "keywords": ["uuid", "guid", "global", "universal", "universally", "unique", "identifer", "id", "random"],
     "homepage": "https://github.com/IcecaveStudios/druid",
     "license": "MIT",
