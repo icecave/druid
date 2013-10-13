@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "43b889f9c1d2c08621618495655acaf0",
+    "hash": "e6a29cf62131dc2ba6d09703dae614ca",
     "packages": [
         {
             "name": "icecave/isolator",
@@ -575,25 +575,25 @@
         },
         {
             "name": "icecave/archer",
-            "version": "dev-release/1.1.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/IcecaveStudios/archer.git",
-                "reference": "41978f795ca23d9e11bea7310fe69e6cedab139d"
+                "reference": "b0152a3274a5a5e0b8bbac81baaaa74fe5a40290"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/IcecaveStudios/archer/zipball/41978f795ca23d9e11bea7310fe69e6cedab139d",
-                "reference": "41978f795ca23d9e11bea7310fe69e6cedab139d",
+                "url": "https://api.github.com/repos/IcecaveStudios/archer/zipball/b0152a3274a5a5e0b8bbac81baaaa74fe5a40290",
+                "reference": "b0152a3274a5a5e0b8bbac81baaaa74fe5a40290",
                 "shasum": ""
             },
             "require": {
                 "phake/phake": "~1",
                 "php": ">=5.3",
-                "sami/sami": "~1.1.0",
+                "sami/sami": "~1",
                 "satooshi/php-coveralls": "~0.6",
                 "symfony/console": "~2",
-                "symfony/process": "~2"
+                "symfony/process": "~2,<2.3.5"
             },
             "require-dev": {
                 "eloquent/liberator": "~1",
@@ -643,7 +643,7 @@
                 "testing",
                 "unit"
             ],
-            "time": "2013-10-12 09:28:15"
+            "time": "2013-10-01 04:03:32"
         },
         {
             "name": "icecave/collections",
@@ -1087,16 +1087,16 @@
         },
         {
             "name": "sami/sami",
-            "version": "v1.1",
+            "version": "v1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Sami.git",
-                "reference": "46c58957ce4823c613e8535626b81e2fd80a9865"
+                "reference": "8d6d896c48766e0cb08b651fb5aca77a1dd788e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Sami/zipball/46c58957ce4823c613e8535626b81e2fd80a9865",
-                "reference": "46c58957ce4823c613e8535626b81e2fd80a9865",
+                "url": "https://api.github.com/repos/fabpot/Sami/zipball/8d6d896c48766e0cb08b651fb5aca77a1dd788e0",
+                "reference": "8d6d896c48766e0cb08b651fb5aca77a1dd788e0",
                 "shasum": ""
             },
             "require": {
@@ -1117,7 +1117,7 @@
             "type": "application",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -1140,7 +1140,7 @@
             "keywords": [
                 "phpdoc"
             ],
-            "time": "2013-08-04 13:56:41"
+            "time": "2013-09-27 17:24:21"
         },
         {
             "name": "satooshi/php-coveralls",
@@ -1461,17 +1461,17 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.3.6",
+            "version": "v2.3.4",
             "target-dir": "Symfony/Component/Process",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "81191e354fe9dad0451036ccf0fdf283649d3f1e"
+                "reference": "1e91553e1cedd0b8fb1da6ea4f89b02e21713d5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/81191e354fe9dad0451036ccf0fdf283649d3f1e",
-                "reference": "81191e354fe9dad0451036ccf0fdf283649d3f1e",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/1e91553e1cedd0b8fb1da6ea4f89b02e21713d5b",
+                "reference": "1e91553e1cedd0b8fb1da6ea4f89b02e21713d5b",
                 "shasum": ""
             },
             "require": {
@@ -1504,7 +1504,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-10-09 21:17:57"
+            "time": "2013-08-22 06:42:25"
         },
         {
             "name": "symfony/stopwatch",
@@ -1654,9 +1654,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "icecave/archer": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": {
         "php": ">=5.3"
     },

@@ -1,7 +1,7 @@
 {
     "name": "icecave/druid",
-    "description": "A simple PHP library for generating universally unique identifiers (UUIDs).",
-    "keywords": ["uuid", "guid", "global", "universal", "universally", "unique", "identifer", "id", "random"],
+    "description": "An RFC-4122 compliant library for generating and parsing universally unique identifiers (UUIDs).",
+    "keywords": ["uuid", "guid", "global", "universal", "universally", "unique", "identifer", "id", "random", "rfc4122", "rfc-4122", "4122"],
     "homepage": "https://github.com/IcecaveStudios/druid",
     "license": "MIT",
     "authors": [
@@ -17,7 +17,7 @@
     },
     "require-dev": {
         "eloquent/typhoon": "~0.9.0",
-        "icecave/archer": "dev-release/1.1.0"
+        "icecave/archer": "~1"
     },
     "suggest": {
         "eloquent/asplode": "Drop-in exception-based error handling."

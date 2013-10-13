@@ -23,15 +23,21 @@ produce UUIDs that implement `UuidInterface`.
 
 #### Version 1 - Network address and time based identifier
 
-*Not yet implemented.*
+```php
+// Not yet implemented.
+```
 
 #### Version 2 - Network address and time based identifier, with POSIX user information
 
-*Not yet implemented.*
+```php
+// Not yet implemented.
+```
 
 #### Version 3 - Named-based MD5 hash identifer
 
-*Not yet implemented.*
+```php
+// Not yet implemented.
+```
 
 #### Version 4 - Randomly generated identifier
 
@@ -44,7 +50,9 @@ assert($uuid instanceof Icecave\Druid\UuidInterface);
 
 #### Version 5 - Name-based SHA-1 identifier
 
-*Not yet implemented.*
+```php
+// Not yet implemented.
+```
 
 ### Parsing UUIDs
 
@@ -52,8 +60,13 @@ UUIDs can be constructed from hexadecimal strings and binary buffers using the
 `Uuid::fromString()` and `Uuid::fromBinary()` methods, respectively.
 
 ```php
-$uuidFromString = Icecave\Druid\Uuid::fromString('550e8400-e29b-41d4-a716-446655440000');
-$uuidFromBinary = Icecave\Druid\Uuid::fromBinary("\x55\x0e\x84\x00\xe2\x9b\x41\xd4\xa7\x16\x44\x66\x55\x44\x00\x00");
+$uuidFromString = Icecave\Druid\Uuid::fromString(
+    '550e8400-e29b-41d4-a716-446655440000'
+);
+
+$uuidFromBinary = Icecave\Druid\Uuid::fromBinary(
+    "\x55\x0e\x84\x00\xe2\x9b\x41\xd4\xa7\x16\x44\x66\x55\x44\x00\x00"
+);
 ```
 
 <!-- references -->
