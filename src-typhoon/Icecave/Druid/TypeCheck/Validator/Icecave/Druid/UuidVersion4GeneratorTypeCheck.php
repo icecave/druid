@@ -1,7 +1,7 @@
 <?php
 namespace Icecave\Druid\TypeCheck\Validator\Icecave\Druid;
 
-class UuidVersion4FactoryTypeCheck extends \Icecave\Druid\TypeCheck\AbstractValidator
+class UuidVersion4GeneratorTypeCheck extends \Icecave\Druid\TypeCheck\AbstractValidator
 {
     public function validateConstruct(array $arguments)
     {

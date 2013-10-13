@@ -1,9 +1,14 @@
 <?php
 namespace Icecave\Druid;
 
-interface UuidFactoryInterface
+/**
+ * Generates a UUID.
+ */
+interface UuidGeneratorInterface
 {
     /**
+     * Generate a UUID.
+     *
      * @return UuidInterface
      */
     public function create();

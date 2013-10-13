@@ -4,7 +4,12 @@ namespace Icecave\Druid;
 use Icecave\Druid\TypeCheck\TypeCheck;
 use Icecave\Isolator\Isolator;
 
-class UuidVersion4Factory implements UuidFactoryInterface
+/**
+ * Generates a Version 4 UUID as per RFC-4122.
+ *
+ * @link http://tools.ietf.org/html/rfc4122#section-4.4
+ */
+class UuidVersion4Generator implements UuidGeneratorInterface
 {
     /**
      * @param Isolator|null $isolator
@@ -17,6 +22,10 @@ class UuidVersion4Factory implements UuidFactoryInterface
     }
 
     /**
+     * Generate a version 4 UUID.
+     *
+     * @link http://tools.ietf.org/html/rfc4122#section-4.4
+     *
      * @return UuidInterface
      */
     public function create()
@@ -40,11 +49,6 @@ class UuidVersion4Factory implements UuidFactoryInterface
         );
     }
 
-    /**
-     * RFC-4122 section 4.4.
-     *
-     * {@link http://tools.ietf.org/html/rfc4122#section-4.4}
-     */
     const GENERATOR_VERSION_MASK = 0x0fff;
     const GENERATOR_VERSION_VALUE = 4; // version 4
     const GENERATOR_RESERVED_MASK = 0x7f;

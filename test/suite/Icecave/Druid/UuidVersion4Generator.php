@@ -5,12 +5,12 @@ use Icecave\Isolator\Isolator;
 use Phake;
 use PHPUnit_Framework_TestCase;
 
-class UuidVersion4FactoryTest extends PHPUnit_Framework_TestCase
+class UuidVersion4GeneratorTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
         $this->isolator = Phake::mock(Isolator::className());
-        $this->factory = new UuidVersion4Factory($this->isolator);
+        $this->generator = new UuidVersion4Generator($this->isolator);
 
         Phake::when($this->isolator)
             ->mt_rand(0, 0xffff)
@@ -32,7 +32,7 @@ class UuidVersion4FactoryTest extends PHPUnit_Framework_TestCase
 
     public function testCreate()
     {
-        $uuid = $this->factory->create();
+        $uuid = $this->generator->create();
 
         // RFC-4122: Set the two most significant bits (bits 6 and 7) of the
         //           clock_seq_hi_and_reserved to zero and one, respectively

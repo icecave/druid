@@ -4,18 +4,37 @@ namespace Icecave\Druid;
 use Icecave\Druid\TypeCheck\TypeCheck;
 use InvalidArgumentException;
 
+/**
+ * An RFC-4122 universally unique identifier (UUID).
+ *
+ * A UUID is a 16-byte (128-bit) number with the following fields:
+ *
+ *  0               1               2               3
+ *  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ * | time_low (32-bits)                                            |
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ * | time_mid (16-bits)            | time_hi (16-bits)             |
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ * | clk_seq_hi (8)| clk_seq_lo (8)|  node (48-bits)               |
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ * | node (continued)                                              |
+ * +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ *
+ * @link http://tools.ietf.org/html/rfc4122
+ */
 class Uuid implements UuidInterface
 {
     /**
-     * @param integer $timeLowHi
-     * @param integer $timeLowLow
-     * @param integer $timeMid
-     * @param integer $timeHi
-     * @param integer $clockSeqHi
-     * @param integer $clockSeqLow
-     * @param integer $nodeHi
-     * @param integer $nodeMid
-     * @param integer $nodeLow
+     * @param integer $timeLowHi   The upper 16-bits of the RFC-4122 time_low field.
+     * @param integer $timeLowLow  The lower 16-bits of the RFC-4122 time_low field.
+     * @param integer $timeMid     The RFC-4122 time_mid field.
+     * @param integer $timeHi      The RFC-4122 time_hi_and_version field.
+     * @param integer $clockSeqHi  The RFC-4122 clock_seq_hi_and_reserved field.
+     * @param integer $clockSeqLow The RFC-4122 clock_seq_low field.
+     * @param integer $nodeHi      The upper 16-bits of the RFC-4122 node field.
+     * @param integer $nodeMid     The middle 16-bits of the RFC-4122 node field.
+     * @param integer $nodeLow     The lower 16-bits of the RFC-4122 node field.
      */
     public function __construct(
         $timeLowHi,
@@ -99,7 +118,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return integer
+     * The upper 16-bits of the RFC-4122 time_low field.
+     *
+     * @return integer The upper 16-bits of the RFC-4122 time_low field.
      */
     public function timeLowHi()
     {
@@ -109,7 +130,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return integer
+     * The lower 16-bits of the RFC-4122 time_low field.
+     *
+     * @return integer The lower 16-bits of the RFC-4122 time_low field.
      */
     public function timeLowLow()
     {
@@ -119,7 +142,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return integer
+     * The RFC-4122 time_mid field.
+     *
+     * @return integer The RFC-4122 time_mid field.
      */
     public function timeMid()
     {
@@ -129,7 +154,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return integer
+     * The RFC-4122 time_hi_and_version field.
+     *
+     * @return integer The RFC-4122 time_hi_and_version field.
      */
     public function timeHi()
     {
@@ -139,7 +166,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return integer
+     * The RFC-4122 clock_seq_hi_and_reserved field.
+     *
+     * @return integer The RFC-4122 clock_seq_hi_and_reserved field.
      */
     public function clockSeqHi()
     {
@@ -149,7 +178,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return integer
+     * The RFC-4122 clock_seq_low field.
+     *
+     * @return integer The RFC-4122 clock_seq_low field.
      */
     public function clockSeqLow()
     {
@@ -159,7 +190,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return integer
+     * The upper 16-bits of the RFC-4122 node field.
+     *
+     * @return integer The upper 16-bits of the RFC-4122 node field.
      */
     public function nodeHi()
     {
@@ -169,7 +202,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return integer
+     * The middle 16-bits of the RFC-4122 node field.
+     *
+     * @return integer The middle 16-bits of the RFC-4122 node field.
      */
     public function nodeMid()
     {
@@ -179,7 +214,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return integer
+     * The lower 16-bits of the RFC-4122 node field.
+     *
+     * @return integer The lower 16-bits of the RFC-4122 node field.
      */
     public function nodeLow()
     {
@@ -189,7 +226,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return string
+     * Generate a string representation of this UUID.
+     *
+     * @return string A string representation of this UUID in the form xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.
      */
     public function string()
     {
@@ -210,7 +249,9 @@ class Uuid implements UuidInterface
     }
 
     /**
-     * @return string
+     * Get the raw binary representation of this UUID.
+     *
+     * @return string A 16-byte binary representation of this UUID.
      */
     public function bytes()
     {
@@ -229,10 +270,10 @@ class Uuid implements UuidInterface
         );
     }
 
-    const STRING_FORMAT = '%04x%04x-%04x-%04x-%02x%02x-%04x%04x%04x';
+    const STRING_FORMAT  = '%04x%04x-%04x-%04x-%02x%02x-%04x%04x%04x';
     const STRING_PATTERN = '/^([\da-f]{4})([\da-f]{4})-([\da-f]{4})-([\da-f]{4})-([\da-f]{2})([\da-f]{2})-([\da-f]{4})([\da-f]{4})([\da-f]{4})$/i';
-    const MASK16 = 0xffff;
-    const MASK8  = 0xff;
+    const MASK16         = 0xffff;
+    const MASK8          = 0xff;
 
     private $typeCheck;
     private $timeLowHi;
