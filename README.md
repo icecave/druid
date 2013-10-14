@@ -4,7 +4,7 @@
 [![Test Coverage]](https://coveralls.io/r/IcecaveStudios/druid?branch=develop)
 [![SemVer]](http://semver.org)
 
-**Druid** is an RFC-4122 compliant PHP library for generating and parsing
+**Druid** is an [RFC-4122] compliant PHP library for generating and parsing
 universally unique identifiers (UUIDs).
 
 * Install via [Composer](http://getcomposer.org) package [icecave/druid](https://packagist.org/packages/icecave/druid)
@@ -73,3 +73,4 @@ $uuidFromBinary = Icecave\Druid\Uuid::fromBinary(
 [Build Status]: https://travis-ci.org/IcecaveStudios/druid.png?branch=develop
 [Test Coverage]: https://coveralls.io/repos/IcecaveStudios/druid/badge.png?branch=develop
 [SemVer]: http://calm-shore-6115.herokuapp.com/?label=semver&value=0.0.0&color=red
+[RFC-4122]: http://tools.ietf.org/html/rfc4122
