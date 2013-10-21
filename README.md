@@ -4,20 +4,18 @@
 [![Test Coverage]](https://coveralls.io/r/IcecaveStudios/druid?branch=develop)
 [![SemVer]](http://semver.org)
 
-**Druid** is an [RFC-4122] compliant PHP library for generating and parsing
-universally unique identifiers (UUIDs).
+**Druid** is an [RFC-4122] compliant PHP library for generating and parsing universally unique identifiers (UUIDs).
 
 * Install via [Composer](http://getcomposer.org) package [icecave/druid](https://packagist.org/packages/icecave/druid)
 * Read the [API documentation](http://icecavestudios.github.io/druid/artifacts/documentation/api/)
 
 ## Examples
 
-**Druid** provides a generator class for each supported UUID version. UUIDs are
-created by first instantiating the generator for the desired UUID version, then
-calling the `create()` method.
+**Druid** provides a generator class for each supported UUID version. UUIDs are created by first instantiating the
+generator for the desired UUID version, then calling the `create()` method.
 
-All generator classes implement the `UuidGeneratorInterface` interface, and
-produce UUIDs that implement `UuidInterface`.
+All generator classes implement the `UuidGeneratorInterface` interface, and produce UUIDs that implement
+`UuidInterface`.
 
 ### Generating UUIDs
 
@@ -56,8 +54,8 @@ assert($uuid instanceof Icecave\Druid\UuidInterface);
 
 ### Parsing UUIDs
 
-UUIDs can be constructed from hexadecimal strings and binary buffers using the
-`Uuid::fromString()` and `Uuid::fromBinary()` methods, respectively.
+UUIDs can be constructed from hexadecimal strings and binary buffers using the `Uuid::fromString()` and
+`Uuid::fromBinary()` methods, respectively.
 
 ```php
 $uuidFromString = Icecave\Druid\Uuid::fromString(
