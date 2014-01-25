@@ -68,7 +68,7 @@ $uuidFromBinary = Icecave\Druid\Uuid::fromBinary(
 ```
 
 <!-- references -->
-[Build Status]: https://travis-ci.org/IcecaveStudios/druid.png?branch=develop
-[Test Coverage]: https://coveralls.io/repos/IcecaveStudios/druid/badge.png?branch=develop
-[SemVer]: http://calm-shore-6115.herokuapp.com/?label=semver&value=0.1.0&color=yellow
+[Build Status]: https://b.adge.me/travis/IcecaveStudios/druid/develop.svg
+[Test Coverage]: https://b.adge.me/coveralls/IcecaveStudios/druid/develop.svg
+[SemVer]: https://b.adge.me/:semver-0.1.0-yellow.svg
 [RFC-4122]: http://tools.ietf.org/html/rfc4122
