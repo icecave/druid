@@ -68,7 +68,7 @@ $uuidFromBinary = Icecave\Druid\Uuid::fromBinary(
 ```
 
 <!-- references -->
-[Build Status]: https://b.adge.me/travis/IcecaveStudios/druid/develop.svg
-[Test Coverage]: https://b.adge.me/coveralls/IcecaveStudios/druid/develop.svg
-[SemVer]: https://b.adge.me/:semver-0.1.0-yellow.svg
+[Build Status]: http://img.shields.io/travis/IcecaveStudios/druid/develop.svg
+[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/druid/develop.svg
+[SemVer]: http://img.shields.io/:semver-0.1.0-yellow.svg
 [RFC-4122]: http://tools.ietf.org/html/rfc4122
