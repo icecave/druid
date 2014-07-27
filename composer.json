@@ -16,23 +16,14 @@
         "icecave/isolator": "~2"
     },
     "require-dev": {
-        "eloquent/typhoon": "~0.9.0",
         "icecave/archer": "~1"
     },
     "suggest": {
         "eloquent/asplode": "Drop-in exception-based error handling."
     },
     "autoload": {
-        "psr-0": {
-            "Icecave\\Druid": "src",
-            "Icecave\\Druid\\TypeCheck": "src-typhoon"
-        }
-    },
-    "extra": {
-        "typhoon": {
-            "output-path": "src-typhoon",
-            "validator-namespace": "Icecave\\Druid\\TypeCheck",
-            "use-native-callable": false
+        "psr-4": {
+            "Icecave\\Druid\\": "src"
         }
     }
 }

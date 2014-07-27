@@ -1,7 +1,6 @@
 <?php
 namespace Icecave\Druid;
 
-use Icecave\Druid\TypeCheck\TypeCheck;
 use InvalidArgumentException;
 
 /**
@@ -47,8 +46,6 @@ class Uuid implements UuidInterface
         $nodeMid,
         $nodeLow
     ) {
-        $this->typeCheck = TypeCheck::get(__CLASS__, func_get_args());
-
         $this->timeLowHi = $timeLowHi & static::MASK16;
         $this->timeLowLow = $timeLowLow & static::MASK16;
         $this->timeMid = $timeMid & static::MASK16;
@@ -68,8 +65,6 @@ class Uuid implements UuidInterface
      */
     public static function fromString($string)
     {
-        TypeCheck::get(__CLASS__)->fromString(func_get_args());
-
         $result = array();
         if (!preg_match(self::STRING_PATTERN, $string, $result)) {
             throw new InvalidArgumentException('Invalid UUID.');
@@ -96,8 +91,6 @@ class Uuid implements UuidInterface
      */
     public static function fromBytes($bytes)
     {
-        TypeCheck::get(__CLASS__)->fromBytes(func_get_args());
-
         if (16 !== strlen($bytes)) {
             throw new InvalidArgumentException('Invalid UUID.');
         }
@@ -124,8 +117,6 @@ class Uuid implements UuidInterface
      */
     public function timeLowHi()
     {
-        $this->typeCheck->timeLowHi(func_get_args());
-
         return $this->timeLowHi;
     }
 
@@ -136,8 +127,6 @@ class Uuid implements UuidInterface
      */
     public function timeLowLow()
     {
-        $this->typeCheck->timeLowLow(func_get_args());
-
         return $this->timeLowLow;
     }
 
@@ -148,8 +137,6 @@ class Uuid implements UuidInterface
      */
     public function timeMid()
     {
-        $this->typeCheck->timeMid(func_get_args());
-
         return $this->timeMid;
     }
 
@@ -160,8 +147,6 @@ class Uuid implements UuidInterface
      */
     public function timeHi()
     {
-        $this->typeCheck->timeHi(func_get_args());
-
         return $this->timeHi;
     }
 
@@ -172,8 +157,6 @@ class Uuid implements UuidInterface
      */
     public function clockSeqHi()
     {
-        $this->typeCheck->clockSeqHi(func_get_args());
-
         return $this->clockSeqHi;
     }
 
@@ -184,8 +167,6 @@ class Uuid implements UuidInterface
      */
     public function clockSeqLow()
     {
-        $this->typeCheck->clockSeqLow(func_get_args());
-
         return $this->clockSeqLow;
     }
 
@@ -196,8 +177,6 @@ class Uuid implements UuidInterface
      */
     public function nodeHi()
     {
-        $this->typeCheck->nodeHi(func_get_args());
-
         return $this->nodeHi;
     }
 
@@ -208,8 +187,6 @@ class Uuid implements UuidInterface
      */
     public function nodeMid()
     {
-        $this->typeCheck->nodeMid(func_get_args());
-
         return $this->nodeMid;
     }
 
@@ -220,8 +197,6 @@ class Uuid implements UuidInterface
      */
     public function nodeLow()
     {
-        $this->typeCheck->nodeLow(func_get_args());
-
         return $this->nodeLow;
     }
 
@@ -232,8 +207,6 @@ class Uuid implements UuidInterface
      */
     public function string()
     {
-        $this->typeCheck->string(func_get_args());
-
         return sprintf(
             static::STRING_FORMAT,
             $this->timeLowHi(),
@@ -255,8 +228,6 @@ class Uuid implements UuidInterface
      */
     public function bytes()
     {
-        $this->typeCheck->bytes(func_get_args());
-
         return pack(
             'n*',
             $this->timeLowHi(),
@@ -275,7 +246,6 @@ class Uuid implements UuidInterface
     const MASK16         = 0xffff;
     const MASK8          = 0xff;
 
-    private $typeCheck;
     private $timeLowHi;
     private $timeLowLow;
     private $timeMid;

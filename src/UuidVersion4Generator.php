@@ -1,7 +1,6 @@
 <?php
 namespace Icecave\Druid;
 
-use Icecave\Druid\TypeCheck\TypeCheck;
 use Icecave\Isolator\Isolator;
 
 /**
@@ -16,9 +15,7 @@ class UuidVersion4Generator implements UuidGeneratorInterface
      */
     public function __construct(Isolator $isolator = null)
     {
-        $this->typeCheck = TypeCheck::get(__CLASS__, func_get_args());
-
-        $this->isolator = $isolator = Isolator::get($isolator);
+        $this->isolator = Isolator::get($isolator);
     }
 
     /**
@@ -30,8 +27,6 @@ class UuidVersion4Generator implements UuidGeneratorInterface
      */
     public function create()
     {
-        $this->typeCheck->create(func_get_args());
-
         return new Uuid(
             $this->isolator->mt_rand(0, Uuid::MASK16),
             $this->isolator->mt_rand(0, Uuid::MASK16),
@@ -56,6 +51,5 @@ class UuidVersion4Generator implements UuidGeneratorInterface
 
     const VERSION_OFFSET = 12;
 
-    private $typeCheck;
     private $isolator;
 }
