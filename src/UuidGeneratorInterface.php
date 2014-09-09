@@ -11,5 +11,5 @@ interface UuidGeneratorInterface
      *
      * @return UuidInterface
      */
-    public function create();
+    public function generate();
 }

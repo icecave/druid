@@ -4,20 +4,18 @@
 [![Test Coverage]](https://coveralls.io/r/IcecaveStudios/druid?branch=develop)
 [![SemVer]](http://semver.org)
 
-**Druid** is an [RFC-4122] compliant PHP library for generating and parsing
-universally unique identifiers (UUIDs).
+**Druid** is an [RFC-4122] compliant PHP library for generating and parsing universally unique identifiers (UUIDs).
 
 * Install via [Composer](http://getcomposer.org) package [icecave/druid](https://packagist.org/packages/icecave/druid)
 * Read the [API documentation](http://icecavestudios.github.io/druid/artifacts/documentation/api/)
 
 ## Examples
 
-**Druid** provides a generator class for each supported UUID version. UUIDs are
-created by first instantiating the generator for the desired UUID version, then
-calling the `create()` method.
+**Druid** provides a generator class for each supported UUID version. UUIDs are created by first instantiating the
+generator for the desired UUID version, then calling the `create()` method.
 
-All generator classes implement the `UuidGeneratorInterface` interface, and
-produce UUIDs that implement `UuidInterface`.
+All generator classes implement the `UuidGeneratorInterface` interface, and produce UUIDs that implement
+`UuidInterface`.
 
 ### Generating UUIDs
 
@@ -56,8 +54,8 @@ assert($uuid instanceof Icecave\Druid\UuidInterface);
 
 ### Parsing UUIDs
 
-UUIDs can be constructed from hexadecimal strings and binary buffers using the
-`Uuid::fromString()` and `Uuid::fromBinary()` methods, respectively.
+UUIDs can be constructed from hexadecimal strings and binary buffers using the `Uuid::fromString()` and
+`Uuid::fromBinary()` methods, respectively.
 
 ```php
 $uuidFromString = Icecave\Druid\Uuid::fromString(
@@ -70,7 +68,7 @@ $uuidFromBinary = Icecave\Druid\Uuid::fromBinary(
 ```
 
 <!-- references -->
-[Build Status]: https://travis-ci.org/IcecaveStudios/druid.png?branch=develop
-[Test Coverage]: https://coveralls.io/repos/IcecaveStudios/druid/badge.png?branch=develop
-[SemVer]: http://calm-shore-6115.herokuapp.com/?label=semver&value=0.1.0&color=yellow
+[Build Status]: http://img.shields.io/travis/IcecaveStudios/druid/develop.svg
+[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/druid/develop.svg
+[SemVer]: http://img.shields.io/:semver-1.0.0-green.svg
 [RFC-4122]: http://tools.ietf.org/html/rfc4122
