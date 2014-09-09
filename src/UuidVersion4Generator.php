@@ -25,7 +25,7 @@ class UuidVersion4Generator implements UuidGeneratorInterface
      *
      * @return UuidInterface
      */
-    public function create()
+    public function generate()
     {
         return new Uuid(
             $this->isolator->mt_rand(0, Uuid::MASK16),

@@ -25,5 +25,10 @@
         "psr-4": {
             "Icecave\\Druid\\": "src"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "0.2.x-dev"
+        }
     }
 }

@@ -30,9 +30,9 @@ class UuidVersion4GeneratorTest extends PHPUnit_Framework_TestCase
             ->thenReturn(0x44);
     }
 
-    public function testCreate()
+    public function testGenerate()
     {
-        $uuid = $this->generator->create();
+        $uuid = $this->generator->generate();
 
         // RFC-4122: Set the two most significant bits (bits 6 and 7) of the
         //           clock_seq_hi_and_reserved to zero and one, respectively
