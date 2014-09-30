@@ -1,7 +1,20 @@
 {
     "name": "icecave/druid",
     "description": "An RFC-4122 compliant library for generating and parsing universally unique identifiers (UUIDs).",
-    "keywords": ["uuid", "guid", "global", "universal", "universally", "unique", "identifer", "id", "random", "rfc4122", "rfc-4122", "4122"],
+    "keywords": [
+        "uuid",
+        "guid",
+        "global",
+        "universal",
+        "universally",
+        "unique",
+        "identifer",
+        "id",
+        "random",
+        "rfc4122",
+        "rfc-4122",
+        "4122"
+    ],
     "homepage": "https://github.com/IcecaveStudios/druid",
     "license": "MIT",
     "authors": [
