@@ -76,5 +76,5 @@ $uuidFromBinary = Icecave\Druid\Uuid::fromBinary(
 <!-- references -->
 [Build Status]: http://img.shields.io/travis/IcecaveStudios/druid/develop.svg?style=flat-square
 [Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/druid/develop.svg?style=flat-square
-[SemVer]: http://img.shields.io/:semver-1.0.0-brightgreen.svg?style=flat-square
+[SemVer]: http://img.shields.io/:semver-1.0.1-brightgreen.svg?style=flat-square
 [RFC-4122]: http://tools.ietf.org/html/rfc4122
