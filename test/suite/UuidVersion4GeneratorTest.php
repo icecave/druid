@@ -1,7 +1,6 @@
 <?php
 namespace Icecave\Druid;
 
-use Icecave\Isolator\Isolator;
 use Phake;
 use PHPUnit_Framework_TestCase;
 
@@ -9,7 +8,7 @@ class UuidVersion4GeneratorTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->isolator = Phake::mock(Isolator::className());
+        $this->isolator = Phake::mock('Icecave\Isolator\Isolator');
         $this->generator = new UuidVersion4Generator($this->isolator);
 
         Phake::when($this->isolator)
