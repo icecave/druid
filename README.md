@@ -67,8 +67,14 @@ $uuidFromBinary = Icecave\Druid\Uuid::fromBinary(
 );
 ```
 
+## Contact us
+
+* Follow [@IcecaveStudios](https://twitter.com/IcecaveStudios) on Twitter
+* Visit the [Icecave Studios website](http://icecave.com.au)
+* Join `#icecave` on [irc.freenode.net](http://webchat.freenode.net?channels=icecave)
+
 <!-- references -->
-[Build Status]: http://img.shields.io/travis/IcecaveStudios/druid/develop.svg
-[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/druid/develop.svg
-[SemVer]: http://img.shields.io/:semver-1.0.0-green.svg
+[Build Status]: http://img.shields.io/travis/IcecaveStudios/druid/develop.svg?style=flat-square
+[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/druid/develop.svg?style=flat-square
+[SemVer]: http://img.shields.io/:semver-1.0.1-brightgreen.svg?style=flat-square
 [RFC-4122]: http://tools.ietf.org/html/rfc4122
