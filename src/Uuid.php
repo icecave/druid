@@ -222,6 +222,16 @@ class Uuid implements UuidInterface
     }
 
     /**
+     * Generate a string representation of this UUID.
+     *
+     * @return string A string representation of this UUID in the form xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.
+     */
+    public function __toString()
+    {
+        return $this->string();
+    }
+
+    /**
      * Get the raw binary representation of this UUID.
      *
      * @return string A 16-byte binary representation of this UUID.
