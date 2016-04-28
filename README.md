@@ -41,7 +41,7 @@ All generator classes implement the `UuidGeneratorInterface` interface, and prod
 
 ```php
 $generator = new Icecave\Druid\UuidVersion4Generator;
-$uuid = $generator->create();
+$uuid = $generator->generate();
 
 assert($uuid instanceof Icecave\Druid\UuidInterface);
 ```
