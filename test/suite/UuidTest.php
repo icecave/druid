@@ -109,6 +109,11 @@ class UuidTest extends PHPUnit_Framework_TestCase
         $this->assertSame('01234567-89ab-cdef-fedc-ba9876543210', $this->uuid->string());
     }
 
+    public function testToString()
+    {
+        $this->assertSame('01234567-89ab-cdef-fedc-ba9876543210', strval($this->uuid));
+    }
+
     public function testBytes()
     {
         $this->assertSame("\x01\x23\x45\x67\x89\xab\xcd\xef\xfe\xdc\xba\x98\x76\x54\x32\x10", $this->uuid->bytes());

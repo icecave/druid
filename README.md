@@ -1,13 +1,11 @@
 # Druid
 
-[![Build Status]](https://travis-ci.org/IcecaveStudios/druid)
-[![Test Coverage]](https://coveralls.io/r/IcecaveStudios/druid?branch=develop)
-[![SemVer]](http://semver.org)
+> **This project has been deprecated by the authors. Use [ramsey/uuid](https://github.com/ramsey/uuid) instead.**
+
 
 **Druid** is an [RFC-4122] compliant PHP library for generating and parsing universally unique identifiers (UUIDs).
 
-* Install via [Composer](http://getcomposer.org) package [icecave/druid](https://packagist.org/packages/icecave/druid)
-* Read the [API documentation](http://icecavestudios.github.io/druid/artifacts/documentation/api/)
+    composer require icecave/druid
 
 ## Examples
 
@@ -41,7 +39,7 @@ All generator classes implement the `UuidGeneratorInterface` interface, and prod
 
 ```php
 $generator = new Icecave\Druid\UuidVersion4Generator;
-$uuid = $generator->create();
+$uuid = $generator->generate();
 
 assert($uuid instanceof Icecave\Druid\UuidInterface);
 ```
@@ -66,15 +64,3 @@ $uuidFromBinary = Icecave\Druid\Uuid::fromBinary(
     "\x55\x0e\x84\x00\xe2\x9b\x41\xd4\xa7\x16\x44\x66\x55\x44\x00\x00"
 );
 ```
-
-## Contact us
-
-* Follow [@IcecaveStudios](https://twitter.com/IcecaveStudios) on Twitter
-* Visit the [Icecave Studios website](http://icecave.com.au)
-* Join `#icecave` on [irc.freenode.net](http://webchat.freenode.net?channels=icecave)
-
-<!-- references -->
-[Build Status]: http://img.shields.io/travis/IcecaveStudios/druid/develop.svg?style=flat-square
-[Test Coverage]: http://img.shields.io/coveralls/IcecaveStudios/druid/develop.svg?style=flat-square
-[SemVer]: http://img.shields.io/:semver-1.0.1-brightgreen.svg?style=flat-square
-[RFC-4122]: http://tools.ietf.org/html/rfc4122
